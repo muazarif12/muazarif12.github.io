@@ -832,12 +832,14 @@
           <div class="tl-date">Nov 2025 — Present</div>
         </div>
         <ul class="tl-list">
-          <li>Architected and manage a production GKE cluster on GCP serving live AI workloads — node pools, autoscaling, and zero-downtime upgrades</li>
-          <li>Built a real-time CDC pipeline using <span class="chip">Debezium</span> and <span class="chip">Google Pub/Sub</span> for event-driven data sync across services</li>
-          <li>Deployed a full observability stack (<span class="chip">Prometheus</span> + <span class="chip">Grafana</span> + <span class="chip">Alertmanager</span>) with custom PrometheusRule alerts and Gmail SMTP notifications</li>
-          <li>Administered distributed <span class="chip">YugabyteDB</span> clusters — provisioning, backup/restore automation, performance tuning, and cross-zone replication</li>
-          <li>Managed all infrastructure as code with <span class="chip">Terraform</span>, ensuring consistent environments across staging and production</li>
-          <li>Enforced least-privilege <span class="chip">IAM</span> policies and Kubernetes RBAC across all GCP resources</li>
+          <li>Designed and built the company's <span class="chip">GCP</span> network from scratch: a custom VPC with manually defined subnets, plus <span class="chip">Cloud NAT</span> and <span class="chip">Cloud Router</span> so private VMs can reach the internet without public IPs</li>
+          <li>Provisioned a <span class="chip">YugabyteDB</span> cluster (master and tserver nodes) on Compute Engine using <span class="chip">Terraform</span>, with VPC firewall rules restricting database access</li>
+          <li>Built CI/CD pipelines in <span class="chip">Cloud Build</span> for the frontend and backend <span class="chip">Cloud Run</span> services. Each push runs automated tests, builds and stores container images in <span class="chip">Artifact Registry</span>, and deploys a new revision</li>
+          <li>Set up a global HTTPS load balancer with serverless NEGs, putting both Cloud Run services behind the company's custom domain</li>
+          <li>Implemented automated database backups (logical dumps) to <span class="chip">Cloud Storage</span></li>
+          <li>Managed access control with GCP <span class="chip">IAM</span>, using conditional role bindings to follow least privilege</li>
+          <li>Set up <span class="chip">Cloud Monitoring</span> alert policies on database VMs for CPU, memory and disk usage</li>
+          <li>Administered YugabyteDB: configured the YSQL Connection Manager (logical vs. physical connection pooling), managed roles and superuser access, and troubleshot using database logs and Linux tooling</li>
         </ul>
       </div>
 
